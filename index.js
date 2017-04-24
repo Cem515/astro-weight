@@ -23,13 +23,12 @@ for (var i = 0; i < planets.length; i++) {
 }
 
 
-
 document.getElementById('calculateWeight').onclick = function handleClickEvent(ev) {
   alert('Hello!');
     var userWeight = document.getElementById('userWeight').value;
+    var choice = document.getElementById('planetSelect').selectedIndex;
+    var gravity = document.getElementById('planetSelect')[choice].value;
 
-
-  var gravity = select[1]
-  alert('On ' + select + ' you would weigh ' + (userWeight * 1));
+  alert('On ' + choice + ' you would weigh ' + (userWeight * gravity));
 
 }
