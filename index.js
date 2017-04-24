@@ -1,4 +1,3 @@
-
 var planets = [
   ["Sun", 27.9],
   ["Mercury", 0.377],
@@ -15,37 +14,23 @@ var planets = [
 
 var select = document.getElementById("planetSelect");
 
-for(var i = 0; i < planets.length; i++) {
-    var plan = planets[i];
-    var el = document.createElement("option");
-    el.textContent = plan;
-    el.value = plan;
-    select.appendChild(el);
+for (var i = 0; i < planets.length; i++) {
+  var plan = planets[i][0];
+  var el = document.createElement("option");
+  el.textContent = plan;
+  el.value = plan;
+  select.appendChild(el);
 }
 
-
-
-/*  $('#planetSelect').change(function(){
-    var newSelect=document.createElement('select');
-    var selectHTML="";
-    for(i=0; i<choices.length; i=i+1){
-        selectHTML+= "<option value='"+choices[i]+"'>"+choices[i]+"</option>";
-    }
-*/
-    newSelect.innerHTML= selectHTML;
-    document.getElementById('planetSelect').appendChild(newSelect);
-});
-
 document.getElementById('calculateWeight').onclick = function handleClickEvent(ev) {
-    alert('Hello!');
-    function calculateWeight() {
-      var userWeight = document.getElementById('userWeight').value;
-      }
+  alert('Hello!');
 
-      var gravity = e.options[e.selectedIndex].value;
-      alert('On ' + planetName + ' you would weigh ' + userWeight * gravity);
+  function calculateWeight() {
+    var userWeight = document.getElementById('userWeight').value;
+  }
+  var gravity = select[1]
+  alert('On ' + select + ' you would weigh ' + (userWeight * gravity));
 
-    }
+}
 
-    calculateWeight();
-    alert('On ' + planetName + ' you would weigh ' + userWeight * gravity);
+calculateWeight();
