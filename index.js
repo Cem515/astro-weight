@@ -17,8 +17,9 @@ var select = document.getElementById("planetSelect");
 for (var i = 0; i < planets.length; i++) {
   var plan = planets[i][0];
   var el = document.createElement("option");
+  el.innerText = planets[i][0];
+  el.value = planets[i][1];
   el.textContent = plan;
-  el.value = plan;
   select.appendChild(el);
 }
 
@@ -28,7 +29,8 @@ document.getElementById('calculateWeight').onclick = function handleClickEvent(e
     var userWeight = document.getElementById('userWeight').value;
     var choice = document.getElementById('planetSelect').selectedIndex;
     var gravity = document.getElementById('planetSelect')[choice].value;
+    var planetName = planets[choice][0];
 
-  alert('On ' + choice + ' you would weigh ' + (userWeight * gravity));
+  alert('On ' + planetName + ' you would weigh ' + (userWeight * gravity));
 
 }
