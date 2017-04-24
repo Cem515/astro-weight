@@ -22,15 +22,14 @@ for (var i = 0; i < planets.length; i++) {
   select.appendChild(el);
 }
 
+
+
 document.getElementById('calculateWeight').onclick = function handleClickEvent(ev) {
   alert('Hello!');
-
-  function calculateWeight() {
     var userWeight = document.getElementById('userWeight').value;
-  }
+
+
   var gravity = select[1]
-  alert('On ' + select + ' you would weigh ' + (userWeight * gravity));
+  alert('On ' + select + ' you would weigh ' + (userWeight * 1));
 
 }
-
-calculateWeight();
