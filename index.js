@@ -13,7 +13,7 @@ var planets = [
 ];
 
 var select = document.getElementById("planetSelect");
-
+// Loop for Array Drop Down
 for (var i = 0; i < planets.length; i++) {
   var plan = planets[i][0];
   var el = document.createElement("option");
@@ -23,15 +23,15 @@ for (var i = 0; i < planets.length; i++) {
   select.appendChild(el);
 }
 
-
+//function off Click Event
 document.getElementById('calculateWeight').onclick = function handleClickEvent(ev) {
-  alert('Hello!');
-    var userWeight = document.getElementById('userWeight').value;
-    var choice = document.getElementById('planetSelect').selectedIndex;
-    var gravity = document.getElementById('planetSelect')[choice].value;
-    var planetName = document.getElementById('planetSelect')[choice].text;
+
+    var userWeight = document.getElementById('userWeight').value; //User's inputed weight
+    var choice = document.getElementById('planetSelect').selectedIndex; // Chosen Planet's Index Number
+    var gravity = document.getElementById('planetSelect')[choice].value; // Gravity Value of Planet
+    var planetName = document.getElementById('planetSelect')[choice].text; // Planet's Name
     var weight = (userWeight*gravity);
     var roundWeight = Math.round(weight)
 
- document.getElementById('output').innerHTML = ('On ' + planetName + ' you would weigh ' + roundWeight);
+ document.getElementById('output').innerHTML = ('On ' + planetName + ' you would weigh ' + roundWeight); //Final Result Posted
 }
