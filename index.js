@@ -32,5 +32,5 @@ document.getElementById('calculateWeight').onclick = function handleClickEvent(e
     var weight = (userWeight*gravity);
     var roundWeight = Math.round(weight)
 
-document.getElementById('output').innerHTML = 'On ' + planetName + ' you would weigh ' + roundWeight + "lbs.";
+document.getElementById('output').innerHTML = 'On ' + planetName + ' you would weigh ' + roundWeight + "lbs";
 }
