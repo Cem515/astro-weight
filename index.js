@@ -30,7 +30,8 @@ document.getElementById('calculateWeight').onclick = function handleClickEvent(e
     var choice = document.getElementById('planetSelect').selectedIndex;
     var gravity = document.getElementById('planetSelect')[choice].value;
     var planetName = document.getElementById('planetSelect')[choice].text;
+    var weight = (userWeight*gravity);
+    var roundWeight = Math.round(weight)
 
-  alert('On ' + planetName + ' you would weigh ' + (userWeight * gravity));
-
+ document.getElementById('output').innerHTML = ('On ' + planetName + ' you would weigh ' + roundWeight);
 }
